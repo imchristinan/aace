@@ -97,7 +97,6 @@ body {
   font-weight: var(--bs-body-font-weight);
   color: var(--bs-body-color);
   background-color: #F3F1EE;
-  padding: 40px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -133,6 +132,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
+  padding: 30px;
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
@@ -648,6 +648,7 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
+  padding-top: 40px;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -11335,8 +11336,8 @@ header.masthead h1, header.masthead .h1 {
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
   header.masthead h1, header.masthead .h1 {
     font-size: 3rem;
