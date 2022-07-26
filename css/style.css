@@ -70,9 +70,13 @@
   border-radius: 20%;
   overflow: hidden;
   margin-top: 40px;
-  float: ;
 }
 
+.main-image{
+  display:flex;
+  width: 100%;
+  height: auto;
+}
 *,
 *::before,
 *::after {
@@ -85,19 +89,15 @@
   }
 }
 
-.about {
-  color: #231123;
-}
 
 body {
-  margin: 0;
   font-family: Nunito;
-  font-size: var(--bs-body-font-size);
+  font-size: 24px;
+  text-align: center;
   font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
-  text-align: var(--bs-body-text-align);
   background-color: #F3F1EE;
+  padding: 40px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -124,11 +124,11 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: 48px;
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -251,10 +251,10 @@ sup {
 
 a {
   color: #0d6efd;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
-  color: #0a58ca;
+  color: #F6C246;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -622,7 +622,6 @@ progress {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
 }
@@ -691,7 +690,7 @@ progress {
 }
 .row > * {
   flex-shrink: 0;
-  width: 100%;
+  width: 50%;
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -758,7 +757,7 @@ progress {
 }
 
 .col-4 {
-  flex: 0 0 auto;
+  flex: flex-end;
   width: 33.33333333%;
 }
 
@@ -3009,6 +3008,7 @@ textarea.form-control-lg {
 
 
 .btn {
+  font-family: Concert One;
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -3022,10 +3022,10 @@ textarea.form-control-lg {
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 3.125rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3498,10 +3498,12 @@ textarea.form-control-lg {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  display: flex;
-  text-align: center;
-  font-size: 1.25rem;
-  border-radius: 0.3rem;
+  height: 72px;
+  width: 218px;
+  justify-content: center;
+  text-align: center;  
+  font-size: 30px;
+  border-radius: 50px;
 }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -3949,13 +3951,7 @@ textarea.form-control-lg {
   border-top-right-radius: 0;
 }
 
-.nav {
-  display: flex-end;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
+
 
 .nav-link {
   display: block;
@@ -4046,11 +4042,10 @@ textarea.form-control-lg {
 }
 
 .navbar {
-  position: relative;
-  display: flex-end;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: fend;
+  position: static;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -4062,14 +4057,14 @@ textarea.form-control-lg {
 .navbar > .container-xl,
 .navbar > .container-xxl {
   display: flex;
-  flex-wrap: inherit;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
@@ -11349,12 +11344,12 @@ header.masthead h1, header.masthead .h1 {
 }
 
 .showcase .showcase-text {
-  padding: 3rem;
+  padding: 4rem;
 }
 .showcase .showcase-img {
+  max-width: 100%;
+  height: auto;
   align: center;
-  min-height: 40rem;
-  min-width: 40rem;
   background-repeat:no-repeat;
   background-size: contain;
 }
@@ -11372,14 +11367,14 @@ header.masthead h1, header.masthead .h1 {
   max-width: 18rem;
 }
 .testimonials .testimonial-item img {
-  max-width: 12rem;
+  max-width: auto;
+  max-height: auto;
   box-shadow: 0px 5px 5px 0px #adb5bd;
 }
 
 .call-to-action {
   position: relative;
-  background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background-color: #F3F1EE;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -11387,7 +11382,6 @@ header.masthead h1, header.masthead .h1 {
 .call-to-action:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
   height: 100%;
   width: 100%;
   top: 0;
