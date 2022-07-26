@@ -64,6 +64,19 @@
   --bs-body-bg: #fff;
 }
 
+
+#content {
+ position: relative;
+    }
+#content img {
+ z-index: -1;
+ position: absolute;
+ width: 25%;
+ top: -175px;
+ right: -175px;
+    }
+
+
 .logo-image{
   width: 300px;
   height: 300px;
@@ -89,6 +102,13 @@
   }
 }
 
+.vector-yellow{
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  bottom: 45px;
+}
 
 body {
   font-family: Nunito;
@@ -250,7 +270,7 @@ sup {
 }
 
 a {
-  color: #0d6efd;
+  color: #F3F1EE;
   text-decoration: none;
 }
 a:hover {
@@ -2489,22 +2509,7 @@ textarea.form-control-lg {
   margin-left: -1.5em;
 }
 
-.form-check-input {
-  width: 1em;
-  height: 1em;
-  margin-top: 0.25em;
-  vertical-align: top;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-print-color-adjust: exact;
-          color-adjust: exact;
-}
+
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
 }
@@ -11316,7 +11321,6 @@ textarea.form-control-lg {
 
 header.masthead {
   position: relative;
-  background-color: #F3F1EE;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -11324,7 +11328,6 @@ header.masthead {
 header.masthead:before {
   content: "";
   position: absolute;
-  background-color: #F3F1EE;
   height: 100%;
   width: 100%;
   top: 0;
@@ -11350,7 +11353,7 @@ header.masthead h1, header.masthead .h1 {
 .showcase .showcase-img {
   max-width: 100%;
   height: auto;
-  align: center;
+  box-align: center;
   background-repeat:no-repeat;
   background-size: contain;
 }
@@ -11362,7 +11365,6 @@ header.masthead h1, header.masthead .h1 {
 
 .testimonials {
   padding-top: 7rem;
-  padding-bottom: 7rem;
 }
 .testimonials .testimonial-item {
   max-width: 18rem;
@@ -11375,7 +11377,6 @@ header.masthead h1, header.masthead .h1 {
 
 .call-to-action {
   position: relative;
-  background-color: #F3F1EE;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
