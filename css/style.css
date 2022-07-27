@@ -142,23 +142,24 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   line-height: 1.2;
 }
 
-h1, .h1 {
-  font-size: 48px;
-}
+
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
 }
 
 h2, .h2 {
-  padding: 30px;
-  font-size: calc(1.325rem + 0.9vw);
+  padding: 10px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
+}
+
+h2:hover {
+  color: #231123;
 }
 
 h3, .h3 {
@@ -269,13 +270,20 @@ sup {
   top: -0.5em;
 }
 
+
 a {
   color: #F3F1EE;
   text-decoration: none;
 }
 a:hover {
-  color: #F6C246;
+  color: #231123;
 }
+
+a.main-nav:hover {
+  color: #F6C246; 
+  text-decoration: underline; 
+}
+
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
